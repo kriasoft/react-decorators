@@ -1,0 +1,41 @@
+{
+  "name": "react-component-starter",
+  "private": true,
+  "version": "0.0.0",
+  "description": "React Component Starter Kit",
+  "repository": "https://github.com/kriasoft/react-component-starter",
+  "license": "MIT",
+  "engines": {
+    "node": ">= 0.10",
+    "npm": ">= 2.1"
+  },
+  "dependencies": {
+    "react": "^0.13.2"
+  },
+  "devDependencies": {
+    "autoprefixer-core": "^5.1.11",
+    "autoprefixer-loader": "^1.2.0",
+    "babel-core": "^5.1.13",
+    "babel-eslint": "^3.0.1",
+    "babel-loader": "^5.0.0",
+    "browser-sync": "^2.6.5",
+    "css-loader": "^0.12.0",
+    "del": "^1.1.1",
+    "eslint": "^0.20.0",
+    "eslint-loader": "^0.11.1",
+    "eslint-plugin-react": "^2.2.0",
+    "less": "^2.5.0",
+    "less-loader": "^2.2.0",
+    "minimist": "^1.1.1",
+    "parallelshell": "^1.1.1",
+    "style-loader": "^0.12.1",
+    "url-loader": "^0.5.5",
+    "webpack": "^1.8.10"
+  },
+  "scripts": {
+    "build": "webpack --watch",
+    "serve": "browser-sync start --server --files \"index.html,build/**\"",
+    "start": "parallelshell \"npm run build\" \"npm run serve\"",
+    "test": "eslint src"
+  }
+}

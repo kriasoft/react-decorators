@@ -1,0 +1,6 @@
+{
+  "name": "MyComponent",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./MyComponent.js"
+}
