@@ -1,13 +1,24 @@
 {
   "name": "react-component-starter",
-  "private": true,
   "version": "0.0.0",
   "description": "React Component Starter Kit",
+  "keywords": [
+    "react",
+    "react-component"
+  ],
   "repository": "https://github.com/kriasoft/react-component-starter",
   "license": "MIT",
-  "engines": {
-    "node": ">= 0.10",
-    "npm": ">= 2.1"
+  "author": "Your Name <email@example.com>",
+  "main": "./src",
+  "directories": {
+    "bin": "./build",
+    "lib": "./src"
+  },
+  "scripts": {
+    "build": "webpack --watch",
+    "serve": "browser-sync start --server --files \"index.html,build/**\"",
+    "start": "parallelshell \"npm run build\" \"npm run serve\"",
+    "test": "eslint src"
   },
   "dependencies": {
     "react": "^0.13.2"
@@ -18,7 +29,7 @@
     "babel-core": "^5.1.13",
     "babel-eslint": "^3.0.1",
     "babel-loader": "^5.0.0",
-    "browser-sync": "^2.6.5",
+    "browser-sync": "^2.6.9",
     "css-loader": "^0.12.0",
     "del": "^1.1.1",
     "eslint": "^0.20.0",
@@ -30,12 +41,10 @@
     "parallelshell": "^1.1.1",
     "style-loader": "^0.12.1",
     "url-loader": "^0.5.5",
-    "webpack": "^1.8.10"
+    "webpack": "^1.8.11"
   },
-  "scripts": {
-    "build": "webpack --watch",
-    "serve": "browser-sync start --server --files \"index.html,build/**\"",
-    "start": "parallelshell \"npm run build\" \"npm run serve\"",
-    "test": "eslint src"
+  "engines": {
+    "node": ">= 0.10",
+    "npm": ">= 2.1"
   }
 }
