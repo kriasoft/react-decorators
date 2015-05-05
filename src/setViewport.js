@@ -14,7 +14,8 @@ const RESIZE_EVENT = 'resize';
 
 function handleWindowResize() {
   if (viewport.width !== window.innerWidth || viewport.height !== window.innerHeight) {
-    EE.emit(RESIZE_EVENT, {width: window.innerWidth, height: window.innerHeight});
+    viewport = {width: window.innerWidth, height: window.innerHeight};
+    EE.emit(RESIZE_EVENT, viewport);
   }
 }
 
