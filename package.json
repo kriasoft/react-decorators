@@ -1,6 +1,6 @@
 {
   "name": "react-decorators",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A collection of higher-order React components",
   "keywords": [
     "react",
