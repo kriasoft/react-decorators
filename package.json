@@ -1,15 +1,21 @@
 {
-  "name": "react-component-starter",
-  "version": "0.0.0",
-  "description": "React Component Starter Kit",
+  "name": "react-decorators",
+  "version": "0.0.1",
+  "description": "A collection of higher-order React components",
   "keywords": [
     "react",
-    "react-component"
+    "react-component",
+    "higher-order-component",
+    "decorator",
+    "react-decorator"
   ],
   "repository": "https://github.com/kriasoft/react-component-starter",
   "license": "MIT",
-  "author": "Your Name <email@example.com>",
-  "main": "./src",
+  "author": {
+    "name": "Konstantin Tarkus",
+    "email": "hello@tarkus.me"
+  },
+  "main": "./index.js",
   "directories": {
     "bin": "./build",
     "lib": "./src"
@@ -21,6 +27,7 @@
     "test": "eslint src"
   },
   "dependencies": {
+    "eventemitter3": "^1.0.1",
     "react": "^0.13.2"
   },
   "devDependencies": {

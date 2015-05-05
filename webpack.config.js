@@ -1,7 +1,7 @@
 /*!
- * React Component Starter Kit
- * https://github.com/kriasoft/react-component-starter
- * Copyright (c) KriaSoft, LLC. All rights reserved. See LICENSE.txt
+ * React Decorators
+ * MIT License (c) Konstantin Tarkus, Kriasoft LLC
+ * https://github.com/kriasoft/react-decorators
  */
 
 var webpack = require('webpack');
