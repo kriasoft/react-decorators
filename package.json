@@ -9,7 +9,7 @@
     "decorator",
     "react-decorator"
   ],
-  "repository": "https://github.com/kriasoft/react-component-starter",
+  "repository": "https://github.com/kriasoft/react-decorators",
   "license": "MIT",
   "author": {
     "name": "Konstantin Tarkus",
