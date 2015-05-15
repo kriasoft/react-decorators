@@ -7,6 +7,7 @@
 import React, { Component } from 'react'; // eslint-disable-line no-unused-vars
 import { canUseDOM } from 'react/lib/ExecutionEnvironment';
 import EventEmitter from 'eventemitter3';
+import {hocDecorator} from 'hoc';
 
 let EE;
 let viewport = {width: 1366, height: 768}; // Default size for server-side rendering
@@ -19,7 +20,7 @@ function handleWindowResize() {
   }
 }
 
-function setViewport(ComposedComponent) {
+const setViewport = hocDecorator(function setViewport(ComposedComponent) {
   return class Viewport extends Component {
 
     constructor() {
@@ -57,6 +58,6 @@ function setViewport(ComposedComponent) {
     }
 
   };
-}
+});
 
 export default { setViewport };

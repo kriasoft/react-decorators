@@ -28,7 +28,8 @@
   },
   "dependencies": {
     "eventemitter3": "^1.0.1",
-    "react": "^0.13.2"
+    "react": "^0.13.2",
+    "hoc": "^1.0.0"
   },
   "devDependencies": {
     "autoprefixer-core": "^5.1.11",
