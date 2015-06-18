@@ -18,7 +18,7 @@
   "main": "./index.js",
   "scripts": {
     "build": "babel src --out-dir lib",
-    "lint": "eslint src",
+    "lint": "eslint src test",
     "test": "mocha --compilers js:babel/register --watch"
   },
   "peerDependencies": {
