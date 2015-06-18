@@ -58,4 +58,4 @@ function withViewport(ComposedComponent) {
   };
 }
 
-export default { setViewport };
+export default withViewport;
