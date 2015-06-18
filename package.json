@@ -15,7 +15,7 @@
   "contributors": [
     "Konstantin Tarkus <hello@tarkus.me>"
   ],
-  "main": "./index.js",
+  "main": "./lib/index.js",
   "scripts": {
     "build": "babel src --out-dir lib",
     "lint": "eslint src test",
@@ -23,7 +23,7 @@
   },
   "peerDependencies": {
     "eventemitter3": "^1.0.1",
-    "react": ">= 0.13.0"
+    "react": "^0.13.0"
   },
   "devDependencies": {
     "babel": "^5.5.8",
