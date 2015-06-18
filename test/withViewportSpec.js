@@ -4,10 +4,13 @@
  */
 
 import { describe, it } from 'mocha';
+import { expect } from 'chai';
+import withViewport from '../src/withViewport.js';
 
-describe('setViewport', () => {
+describe('withViewport', () => {
 
   it('Should set a viewport', () => {
+    expect(withViewport).to.exist;
     throw new Error('Not implemented');
   });
 

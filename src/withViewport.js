@@ -3,29 +3,30 @@
  * Copyright (c) Konstantin Tarkus | MIT License
  */
 
-import React, { Component } from 'react'; // eslint-disable-line no-unused-vars
-import { canUseDOM } from 'react/lib/ExecutionEnvironment';
-import EventEmitter from 'eventemitter3';
+const React = require('react');
+const ExecutionEnvironment = require('react/lib/ExecutionEnvironment');
+const EventEmitter = require('eventemitter3');
 
 let EE;
-let viewport = {width: 1366, height: 768}; // Default size for server-side rendering
+let viewport = { width: 1366, height: 768 }; // Default size for server-side rendering
 const RESIZE_EVENT = 'resize';
 
 function handleWindowResize() {
   if (viewport.width !== window.innerWidth || viewport.height !== window.innerHeight) {
-    viewport = {width: window.innerWidth, height: window.innerHeight};
+    viewport = { width: window.innerWidth, height: window.innerHeight };
     EE.emit(RESIZE_EVENT, viewport);
   }
 }
 
 function withViewport(ComposedComponent) {
-  return class Viewport extends Component {
+  return class Viewport extends React.Component {
 
     constructor() {
       super();
 
       this.state = {
-        viewport: canUseDOM ? {width: window.innerWidth, height: window.innerHeight} : viewport
+        viewport: ExecutionEnvironment.canUseDOM ?
+                  { width: window.innerWidth, height: window.innerHeight } : viewport
       };
     }
 
@@ -52,10 +53,10 @@ function withViewport(ComposedComponent) {
     }
 
     handleResize(value) {
-      this.setState({viewport: value});
+      this.setState({ viewport: value });
     }
 
   };
 }
 
-export default withViewport;
+module.exports = withViewport;
