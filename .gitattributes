@@ -9,7 +9,4 @@
 .*      text eol=lf
 *.css   text eol=lf
 *.js    text eol=lf
-*.json  text eol=lf
-*.less  text eol=lf
 *.md    text eol=lf
-*.sass  text eol=lf

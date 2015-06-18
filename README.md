@@ -2,9 +2,6 @@
 
 > A collection of higher-order React components
 
-*Note: The initial project structure is forked from the
-[React Component Starter Kit](https://github.com/kriasoft/react-component-starter)*
-
 ### How to Install
 
 [![npm/react-decorators](https://nodei.co/npm/react-decorators.png?compact=true)](https://www.npmjs.org/package/react-decorators)
@@ -17,9 +14,9 @@ $ npm install react-decorators --save
 
 ```js
 import React from 'react';
-import { viewport } from 'react-decorators';
+import withViewport from 'react-decorators/withViewport';
 
-@viewport
+@withViewport
 class MyComponent {
   render() {
     let { width, height } = this.props.viewport;
@@ -37,8 +34,8 @@ React.render(<MyComponent />, document.body);
 - [React Starter Kit](https://github.com/kriasoft/react-starter-kit)
 - [React Starter Kit Add-ons](https://github.com/kriasoft/react-starter-kit-addons)
 - [React Style Guide](https://github.com/kriasoft/react-starter-kit/blob/master/docs/react-style-guide.md)
-- [React Component Starter Kit](https://github.com/kriasoft/react-component-starter)
+- [React Static Boilerplate](https://github.com/koistya/react-static-boilerplate)
 
 ### Copyright
 
-MIT License (c) Konstantin Tarkus ([@koistya](https://twitter.com/koistya)), Kriasoft LLC
+The MIT License (c) Konstantin Tarkus ([@koistya](https://twitter.com/koistya)), Kriasoft LLC

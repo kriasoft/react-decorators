@@ -1,5 +1,0 @@
-[ignore]
-.*/build
-.*/node_modules
-
-[include]

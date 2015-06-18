@@ -1,7 +1,6 @@
-/*!
+/**
  * React Decorators
- * MIT License (c) Konstantin Tarkus, Kriasoft LLC
- * https://github.com/kriasoft/react-decorators
+ * Copyright (c) Konstantin Tarkus | MIT License
  */
 
 import React, { Component } from 'react'; // eslint-disable-line no-unused-vars
@@ -19,7 +18,7 @@ function handleWindowResize() {
   }
 }
 
-function setViewport(ComposedComponent) {
+function withViewport(ComposedComponent) {
   return class Viewport extends Component {
 
     constructor() {

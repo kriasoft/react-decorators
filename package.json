@@ -9,46 +9,33 @@
     "decorator",
     "react-decorator"
   ],
-  "repository": "https://github.com/kriasoft/react-component-starter",
+  "repository": "https://github.com/kriasoft/react-decorators",
   "license": "MIT",
-  "author": {
-    "name": "Konstantin Tarkus",
-    "email": "hello@tarkus.me"
-  },
+  "author": "Kriasoft",
+  "contributors": [
+    "Konstantin Tarkus <hello@tarkus.me>"
+  ],
   "main": "./index.js",
-  "directories": {
-    "bin": "./build",
-    "lib": "./src"
-  },
   "scripts": {
-    "build": "webpack --watch",
+    "build": "babel src --out-dir lib",
     "serve": "browser-sync start --server --files \"index.html,build/**\"",
     "start": "parallelshell \"npm run build\" \"npm run serve\"",
-    "test": "eslint src"
+    "lint": "eslint src",
+    "test": "mocha --compilers js:babel/register --watch"
   },
-  "dependencies": {
+  "peerDependencies": {
     "eventemitter3": "^1.0.1",
-    "react": "^0.13.2"
+    "react": ">= 0.13.0"
   },
   "devDependencies": {
-    "autoprefixer-core": "^5.1.11",
-    "autoprefixer-loader": "^1.2.0",
-    "babel-core": "^5.2.13",
+    "babel": "^5.5.8",
     "babel-eslint": "^3.0.1",
-    "babel-loader": "^5.0.0",
-    "browser-sync": "^2.7.1",
-    "css-loader": "^0.12.0",
+    "chai": "^3.0.0",
     "del": "^1.1.1",
     "eslint": "^0.20.0",
-    "eslint-loader": "^0.11.1",
     "eslint-plugin-react": "^2.2.0",
-    "less": "^2.5.0",
-    "less-loader": "^2.2.0",
-    "minimist": "^1.1.1",
-    "parallelshell": "^1.1.1",
-    "style-loader": "^0.12.1",
-    "url-loader": "^0.5.5",
-    "webpack": "^1.8.11"
+    "mocha": "^2.2.5",
+    "parallelshell": "^1.1.1"
   },
   "engines": {
     "node": ">= 0.10",
